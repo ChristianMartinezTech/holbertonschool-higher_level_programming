@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-python $PYFILE/main.py 
+python /py/0x00/main.py 
