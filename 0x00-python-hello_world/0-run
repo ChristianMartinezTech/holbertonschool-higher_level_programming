@@ -1,2 +1,2 @@
-#!/usr/bin/python3
-python /usr/local/share/main.py
+#!/usr/local/bin/python3.4
+python main.py
