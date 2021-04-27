@@ -4,4 +4,4 @@ for x in range(0, 100):
         print('{}, '.format(x), end='')
 
     else:
-        print('{}'.format(x))
+        print('{}'.format(x), end='')
