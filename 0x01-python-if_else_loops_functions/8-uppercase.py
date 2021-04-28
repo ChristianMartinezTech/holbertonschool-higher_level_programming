@@ -4,7 +4,7 @@ def uppercase(str):
     mayus = (x - 32)
 
     if x >= 97 and x <= 122:
-        print('{}'.format(chr(mayus))
+        print('{}'.format(chr(mayus), end='')
 
     else:
         continue
