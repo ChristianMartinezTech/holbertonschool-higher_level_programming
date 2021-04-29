@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-for x in range(9):
-    for y in range(9):
-
-        if (x != y) and (xy != 89):
-            print('{}{}, '.format(x)(y))
-
-        elif (x != y) and (xy == 89)
-            print('{}{}'.format(x)(y))
-            
+for num1 in range(0, 9):
+    for num2 in range(0, 10):
+        if num1 == num2 or num1 > num2:
+            continue
+        if num1 == 8 and num2 == 9:
+            continue
+        print("{}{}".format(num1, num2), end=', ')
+print("{}{}".format(num1, num2))
