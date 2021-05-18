@@ -8,6 +8,4 @@ def safe_print_list_integers(my_list=[], x=0):
             counter = counter + 1
         except (IndexError, TypeError):
             counter = counter - 1
-
-    print('\n')
-    return(counter)
+        return(counter)
