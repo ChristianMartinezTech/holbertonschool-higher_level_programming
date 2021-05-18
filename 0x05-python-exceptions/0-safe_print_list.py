@@ -6,5 +6,5 @@ def safe_print_list(my_list=[], x=0):
             return my_list[-1]
         else:
             return(x)
-    except TypeError:
+    except (TypeError, IndexError):
         return(x)
