@@ -6,13 +6,12 @@ class Square:
     """Square class definition"""
     def __init__(self, size=0):
         """Definition of size"""
-        self.__size = size
         if isinstance(size, int):
+            self.__size = size
             if size < 0:
                 raise ValueError('size must be >= 0')
         else:
             raise TypeError('size must be an integer')
-        return(self.__size)
 
     def area(self):
         """definition of area"""
