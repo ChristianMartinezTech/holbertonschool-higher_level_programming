@@ -60,6 +60,6 @@ class Rectangle:
         str_ = ''
         for a in range(self.__height):
             for a in range(self.__width):
-                print('#', end='')
-            print()
-        return(str_)
+                str_ = str_ + '#'
+            str_ += '\n'
+        return(str_[:-1])
