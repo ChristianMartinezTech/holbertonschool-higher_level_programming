@@ -4,6 +4,6 @@ def multiple_returns(sentence):
     first = sentence[0]
 
     if not sentence:
-        first = None
+        return 0, None
     else:
         return (length, first)
