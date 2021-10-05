@@ -1,12 +1,18 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
     try:
-        a = int(a) #turning a and b in int
+        if type(a) == bool:
+            raise TypeError('a must be an integer')
+        else:
+            a = int(a)
     except:
         raise TypeError('a must be an integer')
 
     try:
-        b = int(b)
+        if type(b) == bool:
+            raise TypeError('b must be an integer')
+        else:
+            b = int(b)
     except:
         raise TypeError('b must be an integer')
 

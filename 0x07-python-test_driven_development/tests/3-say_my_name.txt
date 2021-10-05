@@ -1,0 +1,57 @@
+============================
+3-say_my_name Doctest file:
+
+say_my_name returns addition of two arguments.
+============================
+
+
+::
+
+import module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+::
+
+Ints and floats
+====
+
+>>> say_my_name(1, 'Martinez')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name('Chris', 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name('1', 'Martinez')
+My name is 1 Martinez
+
+>>> say_my_name(-10.3, 'Martinez')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name('Chris', 2.5)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+
+Bool
+====
+
+>>> say_my_name(True, 'Martinez')
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name('Chris', False)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+
+Empty strings
+====
+
+>>> say_my_name('', 'Martinez')
+My name is  Martinez
+
+>>> say_my_name('', '')
+My name is

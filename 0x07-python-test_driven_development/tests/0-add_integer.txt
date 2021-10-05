@@ -1,0 +1,95 @@
+============================
+0_add_integer Doctest file:
+
+0_add_integer returns addition of two arguments.
+============================
+
+
+::
+
+import module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+::
+
+Ints
+====
+
+Standard addition
+>>> add_integer(1, 2)
+3
+
+
+Addition with 0 on a
+>>> add_integer(0, 2)
+2
+
+
+Addition with the 98 b def
+>>> add_integer(2)
+100
+
+
+Addition with 0 and negative
+>>> add_integer(0, -3)
+-3
+
+
+Sending int in parenthesis
+>>> add_integer((1), 1)
+2
+
+
+Chars
+=======
+
+Sending a char in add_integer
+>>> add_integer(A, 1)
+a must be an integer
+
+
+Sending b char in add_integer
+>>> add_integer(0, b)
+b must be an integer
+
+
+Strings
+========
+
+String on a
+>>> add_integer("Hola", 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+String on b
+>>> add_integer(1, "Hola")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+Lists
+==========
+Sending a list in a
+>>> add_integer([1, 2, 3], 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Sending a list in b
+>>> add_integer(1, [1, 2, 3])
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+Bool
+=========
+
+Adding a as bool
+>>> add_integer(True, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Adding b as bool
+>>> add_integer(2, False)
+Traceback (most recent call last):
+TypeError: b must be an integer
