@@ -1,0 +1,90 @@
+============================
+2-matrix_divided Doctest file:
+
+2-matrix_divided function that divides all elements of a matrix
+============================
+
+
+::
+
+import module:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+::
+
+Ints
+====
+
+Standard int division
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+
+>>> matrix_divided([[1, 2], [5, 6]], 2)
+[0.5, 1.0, 2.5, 3.0]
+
+>>> matrix_divided([[1], [2]], 2)
+[0.5, 1.0]
+
+
+Other datatypes
+====
+
+Matrix as int
+>>> matrix_divided(1, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix as string
+>>> matrix_divided("1", 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix as tuple
+>>> matrix_divided((1), 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix as bool
+>>> matrix_divided(True, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(False, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Divisions
+====
+
+Division by 0
+>>> matrix_divided([[1], [2]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Empty div
+
+div a string
+>>> matrix_divided([[1], [2]], "2")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+div a bool
+>>> matrix_divided([[1], [2]], True)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+
+Different Length rows
+====
+
+Diff length rows
+>>> matrix_divided([[1, 2], [2]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Diff length rows
+>>> matrix_divided([[1], [2, 3]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size

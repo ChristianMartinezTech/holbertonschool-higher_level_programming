@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Pyhton 3 executable location"""
+
+
 def add_integer(a, b=98):
+    """Function that adds 2 integers"""
+
     try:
         if type(a) == bool:
             raise TypeError('a must be an integer')
