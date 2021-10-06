@@ -6,7 +6,10 @@ matrix = [
     [4, 5, 6]
 ]
 
-new_matrix = [number / div for number in matrix]
+new_matrix = []
+
+for i in range(len(matrix)):
+    new_matrix[i] = (matrix[i] / div)
 
 print(new_matrix)
 print(matrix)

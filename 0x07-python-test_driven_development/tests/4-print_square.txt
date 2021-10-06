@@ -1,0 +1,100 @@
+============================
+4-print_square Doctest file:
+
+4-print_square function that prints a square with the character #
+============================
+
+
+::
+
+import module:
+    >>> print_square = __import__('4-print_square').print_square
+
+::
+
+Ints
+====
+
+Standard printing
+>>> print_square(1)
+#
+
+Standard printing
+>>> print_square(4)
+####
+####
+####
+####
+
+Standard printing
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+Printing 0
+>>> print_square(0)
+
+
+Negative Ints and Floats
+====
+
+Negative Int
+>>> print_square(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Negative Int
+>>> print_square(-10)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Negative float
+>>> print_square(-5.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Negative float
+>>> print_square(-2.33333333333333)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+
+Strings
+=======
+
+String
+>>> print_square("Hola")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+String with number
+>>> print_square("2")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+String with negative number
+>>> print_square("-2")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+
+Bool
+====
+
+Using True as input
+>>> print_square(True)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Using False as input
+>>> print_square(False)
+Traceback (most recent call last):
+TypeError: size must be an integer
