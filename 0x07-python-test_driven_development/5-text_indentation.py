@@ -1,10 +1,17 @@
 #!/usr/bin/python3
+"""Python 3 Executable"""
+
+
 def text_indentation(text):
-	if type(test) is str:
-		for x in text:
-			if x == (46, 58, 63):
+    """function that prints a text with 2 new lines"""
 
+    if type(text) != str:
+        raise TypeError("text must be a string")
 
+    for x in text:
+        if x == "." or x == "?" or x == ":":
+            print(x.strip())
+            print("\n")
 
-	else:
-		raise TypeError("text must be a string")
+        else:
+            print(x, end="")

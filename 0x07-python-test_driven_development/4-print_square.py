@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Python3 executable"""
+
+
 def print_square(size):
+    """function that prints a square with the character #"""
 
     if type(size) is int:
         if size >= 0:
