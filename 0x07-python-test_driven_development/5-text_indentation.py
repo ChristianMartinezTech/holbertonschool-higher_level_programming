@@ -10,7 +10,7 @@ def text_indentation(text):
 
     for x in text:
         if x == "." or x == "?" or x == ":":
-            print(x.strip())
+            print(x)
             print("\n")
 
         else:
