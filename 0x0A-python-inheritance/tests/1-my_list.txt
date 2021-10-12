@@ -1,7 +1,19 @@
-The "1-my_list.py" module
-Import "my_list"
+============================
+MyList Doctest file:
 
->>>print(my_list)
+print_sorted prints the list, but sorted (ascending sort).
+============================
+
+::
+
+import module:
+    >>> print_sorted = __import__('1-my_list').print_sorted
+
+::
+
+printing
+>>> print(my_list)
 [1, 4, 2, 3, 5]
->>>my_list.print_sorted()
+
+>>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
