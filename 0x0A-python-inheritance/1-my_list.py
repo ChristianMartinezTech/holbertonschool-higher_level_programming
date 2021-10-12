@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Excecutable"""
+"""Excecutable Python 3 location"""
 
 
 class MyList(list):
