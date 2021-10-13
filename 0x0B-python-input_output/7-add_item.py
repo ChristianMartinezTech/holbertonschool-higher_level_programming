@@ -1,9 +1,18 @@
 #!/usr/bin/python3
 """Python3 Location"""
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 import json
+import sys
 
 
+def reading_argv(sys):
+    """reads argv"""
+    arguments = sys.argv[1:]
+    print(arguments)
+
+
+def save_to_json_file(arguments):
+    """Save the arguments in json"""
+    with open('add_item.json', 'w') as file:
+        json.dumps(arguments, file)
