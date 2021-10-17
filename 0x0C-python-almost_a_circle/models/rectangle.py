@@ -39,6 +39,26 @@ class Rectangle(Base):
         else:
             self.__y = y
 
+    def area(self):
+        return self.__width * self.__height
+
+    def display(self):
+        for a in range(self.__y):
+            print()
+
+        for b in range(self.__height):
+            for c in range(self.__x):
+                print(" ", end="")
+            for d in range(self.__width):
+                print('#', end="")
+            print()
+
+    def __str__(self):
+        text_1 = "[Rectangle] ({}) ".format(self.id)
+        text_2 = "{}/{} - ".format(self.__x, self.__y)
+        text_3 = "{}/{}".format(self.__width, self.__height)
+        return text_1 + text_2 + text_3
+
     @property
     def width(self):
         return self.__width
