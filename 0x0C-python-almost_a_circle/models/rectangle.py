@@ -39,6 +39,48 @@ class Rectangle(Base):
         else:
             self.__y = y
 
+    def update(self, *args, **kwargs):
+
+        if "id" in kwargs:
+            self.id = kwargs.get("id")
+
+        if "width" in kwargs:
+            self.__width = kwargs.get("width")
+
+        if "height" in kwargs:
+            self.__height = kwargs.get("height")
+
+        if "x" in kwargs:
+            self.__x = kwargs.get("x")
+
+        if "y" in kwargs:
+            self.__y = kwargs.get("y")
+
+        if len(args) == 1:
+            self.id = args[0]
+
+        if len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+
+        if len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+
+        if len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+
+        if len(args) == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+
     def area(self):
         return self.__width * self.__height
 
