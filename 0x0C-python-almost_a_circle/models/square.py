@@ -9,9 +9,11 @@ class Square(Rectangle):
     """ class Square"""
 
     def __init__(self, size, x=0, y=0, id=None):
+        self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Function to overide the str output"""
         text_1 = "[Square] ({}) ".format(self.id)
         text_2 = "{}/{} - ".format(self.x, self.y)
         text_3 = "{}".format(self.size)
@@ -27,5 +29,5 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if size <= 0:
             raise ValueError("width must be > 0")
-        self.width = size
-        self.height = size
+        size = self.width
+        size = self.height

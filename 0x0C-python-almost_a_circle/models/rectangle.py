@@ -40,6 +40,7 @@ class Rectangle(Base):
             self.__y = y
 
     def update(self, *args, **kwargs):
+        """Function to update the attribute values"""
 
         if "id" in kwargs:
             self.id = kwargs.get("id")
@@ -82,9 +83,11 @@ class Rectangle(Base):
             self.__y = args[4]
 
     def area(self):
+        """Function to return the area of a rectangle"""
         return self.__width * self.__height
 
     def display(self):
+        """Function to print # as the rectangle"""
         for a in range(self.__y):
             print()
 
@@ -96,6 +99,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """Funtion to overide the str output"""
         text_1 = "[Rectangle] ({}) ".format(self.id)
         text_2 = "{}/{} - ".format(self.__x, self.__y)
         text_3 = "{}/{}".format(self.__width, self.__height)
