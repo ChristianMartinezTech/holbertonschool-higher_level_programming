@@ -1,2 +1,4 @@
 -- Script that lists all the tables of a database in your MySQL server
-SHOW TABLES
+CREATE TABLE IF NOT EXISTS first_table
+id INT
+name VARCHAR(256)
