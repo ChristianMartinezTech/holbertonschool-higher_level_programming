@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function factorial (x) {
-  if (x === 0) {
+  if (x === 0 || !x) {
     return 1; // if number is 0
   } else {
     return x * factorial(x - 1); // if number is positive
