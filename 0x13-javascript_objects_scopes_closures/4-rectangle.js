@@ -17,14 +17,12 @@ module.exports = class Rectangle {
 
   double () { // print width and height with "X" TIMES TWO
     this.width = this.width * 2;
-    for (let y = 0; y < this.height; y++) {
-      console.log('X'.repeat(this.width));
-    }
+    this.height = this.height * 2;
   }
 
   rotate () { // exchange width and height
-    for (let y = 0; y < this.width; y++) {
-      console.log('X'.repeat(this.height));
-    }
+    const temp = this.width;
+    this.width = this.height;
+    this.height = temp;
   }
 };
