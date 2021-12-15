@@ -16,7 +16,6 @@ module.exports = class Rectangle {
   }
 
   double () { // print width and height with "X" TIMES TWO
-    this.height = this.height * 2;
     this.width = this.width * 2;
     for (let y = 0; y < this.height; y++) {
       console.log('X'.repeat(this.width));
