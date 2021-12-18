@@ -15,11 +15,10 @@ if __name__ == "__main__":
         charset="utf8"
         )
 
-    var = "SELECT * FROM states\
-    WHERE name LIKE BINARY '%{argv[4]}%'\
-    ORDER BY id ASC;"
     cur = connection.cursor()
-    cur.execute(var)
+    cur.execute("""SELECT * FROM states
+    WHERE name LIKE '{argv[4]}'
+    ORDER BY id ASC;""")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
