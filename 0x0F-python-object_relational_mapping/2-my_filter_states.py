@@ -16,7 +16,7 @@ if __name__ == "__main__":
         )
 
     var = """SELECT * FROM states
-    WHERE name LIKE BINARY {argv[4]}
+    WHERE name LIKE BINARY '{argv[4]}'
     ORDER BY id ASC;"""
     cur = connection.cursor()
     cur.execute(var)
