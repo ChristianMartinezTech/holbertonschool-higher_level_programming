@@ -23,7 +23,14 @@ if __name__ == "__main__":
     WHERE states.name LIKE %s\
     ORDER BY cities.id;", (argv[4], ))
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+
+    cities = []
+    temp = 0
+
+    for city in query_rows:
+        cities.append(query_rows[idx][0])
+        idx = idx + 1
+    final_cities = ', '.join(cities)
+    print(final_cities)
     cur.close()
     connection.close()
