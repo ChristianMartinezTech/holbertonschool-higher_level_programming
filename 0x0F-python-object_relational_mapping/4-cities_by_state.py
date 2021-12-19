@@ -17,10 +17,10 @@ if __name__ == "__main__":
         )
 
     cur = connection.cursor()
-    cur.execute("SELECT cities.id cities.name\
+    cur.execute("SELECT cities.id, cities.name, state.name\
         FROM cities\
-        INNER JOIN states ON cities.state_id = state.name\
-        ORDER BY cities.id ASC;", (argv[4], ))
+        INNER JOIN states ON cities.state_id = state.id\
+        ORDER BY cities.id ASC;")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
