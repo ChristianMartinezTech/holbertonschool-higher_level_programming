@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     cur = connection.cursor()
     cur.execute("SELECT FROM cities\
-    WHERE cities.state_id LIKE BINARY '%{}%'\
+    WHERE cities.state_id LIKE '%{}%'\
     ORDER BY id ASC;".format(argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
