@@ -20,8 +20,8 @@ if __name__ == "__main__":
     cur = connection.cursor()
     cur.execute("SELECT cities.name FROM cities\
     JOIN states ON cities.state_id = states.id\
-    WHERE states.name = %s\
-    ORDER BY cities.id ASC;", (argv[4], ))
+    WHERE states.name LIKE %s\
+    ORDER BY cities.id;", (argv[4], ))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
