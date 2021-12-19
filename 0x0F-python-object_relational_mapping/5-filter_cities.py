@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Script that lists all states from the database hbtn_0e_0_usa
+""" script that takes in the name of a state as an argument
+ and lists all cities of that state, using hbtn_0e_4_usa
 """
 
 
@@ -17,9 +18,9 @@ if __name__ == "__main__":
         )
 
     cur = connection.cursor()
-    cur.execute("SELECT FROM cities\
-    WHERE cities.state_id LIKE '%{}%'\
-    ORDER BY id ASC;".format(argv[4]))
+    cur.execute("SELECT cities.name FROM cities\
+    WHERE states.name = %s\
+    ORDER BY cities.id ASC;".format(argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
