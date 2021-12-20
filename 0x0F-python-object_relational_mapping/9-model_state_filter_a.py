@@ -19,6 +19,6 @@ if __name__ == "__main__":
     if q is None:
         print("Nothing")
     else:
-        print("{}: {}".format(q.id, q.name))
+        print("{}: {}".format(states.id, states.name))
 
     session.close()
