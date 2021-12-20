@@ -17,8 +17,10 @@ if __name__ == "__main__":
 
     q = session.query(State).order_by(State.id)
 
-    for states in q:
-        if State.id == 1:
-            print("{}: {}".format(states.id, states.name))
+    if q is None:
+        print("Nothing")
+    else:
+        if (i in q == 1):
+            print("{}: {}".format(q.id, q.name))
 
     session.close()
