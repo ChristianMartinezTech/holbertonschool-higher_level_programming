@@ -21,6 +21,6 @@ if __name__ == "__main__":
     if q is None:
         print("Not found")
     else:
-        print("{}: {}".format(q.id))
+        print("{}".format(q.id))
 
     session.close()
