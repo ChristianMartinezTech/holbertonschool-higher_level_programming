@@ -15,11 +15,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    q = session.query(State).filter_by(name='a')
+    q = session.query(State).first()
 
-    """if q is None:
+    if q is None:
         print("Nothing")
-    else:"""
-    print("{}: {}".format(q.id, q.name))
+    else:
+        print("{}: {}".format(q.id, q.name))
 
     session.close()
