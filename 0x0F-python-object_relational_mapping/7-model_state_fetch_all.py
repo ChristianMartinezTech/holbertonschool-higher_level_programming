@@ -19,5 +19,5 @@ if __name__ == "__main__":
 
     for states in q:
         print("{}: {}".format(states.id, states.name))
-    
+
     session.close()
