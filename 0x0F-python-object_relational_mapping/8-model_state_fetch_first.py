@@ -21,7 +21,7 @@ if __name__ == "__main__":
         print("Nothing")
     else:
         for i in q:
-            if State.id == 1:
+            if q.id == 1:
                 print("{}: {}".format(q.id, q.name))
 
     session.close()
