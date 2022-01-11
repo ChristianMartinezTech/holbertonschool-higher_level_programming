@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" script that fetches https://intranet.hbtn.io/status """
+""" script that takes in a URL, sends an URL request
+and displays the X-Request-Id value """
 
 from urllib import request
 from sys import argv
