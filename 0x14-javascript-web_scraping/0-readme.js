@@ -2,10 +2,11 @@
 
 // Including the fs module
 const fs = require('fs')
-
-fs.open(process.argv[2], 'r', function (err, contents) {
+const file = process.argv[2]
+fs.open(file, 'r', function (err, contents) {
   if (err) {
-    return console.error(err)
+    console.error(err);
+  } else {
+    console.log(contents);
   }
-  console.log(contents)
-})
+});
