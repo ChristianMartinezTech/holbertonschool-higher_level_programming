@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
 // Including the fs module
-const fs = require('fs')
-const file = process.argv[2]
+const fs = require('fs');
+const file = process.argv[2];
 
-fs.open(file, 'r', 'utf-8', function (err, contents) {
+fs.open(file, 'r', 'utf-8', function (err, content) {
   if (err) {
-    console.error(err)
-    return
+    console.error(err);
+    return;
   }
-  console.log(contents)
-})
+  console.log(content);
+});
