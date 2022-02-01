@@ -4,10 +4,10 @@
 const fs = require('fs')
 const file = process.argv[2]
 
-fs.readFile(file, 'r', function (err, contents) {
+fs.open(file, 'r', function (err, contents) {
   if (err) {
-    console.error(err);
+    console.error(err)
   } else {
-    console.log(contents);
+    console.log(contents)
   }
-});
+})
