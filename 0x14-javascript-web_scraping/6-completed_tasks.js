@@ -6,18 +6,20 @@
 const request = require('request');
 const url = process.argv[2];
 
-request(url, function (error, header, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   }
 
-  const user = 0;
-  const completedAmount = 0;
+  const bodyData = JSON.parse(body);
+  const finalResult = {};
 
-  for (i in header) {
-    if (header[i] == userId) {
-      if (user != 'userId') {
-      }
+  for (const key in bodyData) {
+    if (finalResult[key.userId] && key.completed) {
+      finalResult[key.userId] += 1;
+    } else if (!finalResult[key.userId] && key.completed) {
+      finalResult[key.userId] = 1;
     }
   }
+  console.log(finalResult);
 });
