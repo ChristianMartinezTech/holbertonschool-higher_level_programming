@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // display the status code of a GET request.
 
-// Including the axios module
+// Including the request module
 const request = require('request');
 const url = process.argv[2];
 
